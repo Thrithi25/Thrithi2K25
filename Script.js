@@ -1,24 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var navbarToggler = document.querySelector(".navbar-toggler");
-    var navbarCollapse = document.querySelector(".navbar-collapse");
-
-    navbarToggler.addEventListener("click", function () {
-        if (!navbarCollapse.classList.contains("show")) {
-            // Show smoothly
-            navbarCollapse.style.display = "block";
-            setTimeout(() => {
-                navbarCollapse.classList.add("show");
-            }, 10); // Small delay to apply animation
-        } else {
-            // Hide smoothly
-            navbarCollapse.classList.remove("show");
-            setTimeout(() => {
-                navbarCollapse.style.display = "none";
-            }, 400); // Matches the CSS transition duration
-        }
-    });
-});
-
 var countDownDate = new Date("March 20, 2025 10:00:00").getTime();
 var timerElement = document.querySelector(".Timer-Style");
 const textElement = document.getElementById("dynamic-text");

@@ -1,10 +1,9 @@
+$(window).scroll(function () {
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 20);
+});
+
 var countDownDate = new Date("March 20, 2025 10:00:00").getTime();
 var timerElement = document.querySelector(".Timer-Style");
-const textElement = document.getElementById("dynamic-text");
-const phrases = ["THRITHI 2K25","Event Starts In"];
-let index = 0;
-let charIndex = 0;
-let isTyping = true;
 
 function updateTimer() {
     let now = new Date().getTime();
@@ -26,28 +25,64 @@ function updateTimer() {
 setInterval(updateTimer, 1000);
 updateTimer();
 
-// Separate text container from timer to prevent movement
-function typeEffect() {
-    if (charIndex < phrases[index].length && isTyping) {
-        textElement.innerHTML = phrases[index].substring(0, charIndex + 1);
-        charIndex++;
-        setTimeout(typeEffect, 100);
-    } else {
-        isTyping = false;
-        setTimeout(eraseEffect, 1500);
+function typeEffect(element, phrases, speed = 100, eraseSpeed = 50, delay = 1500) {
+    let index = 0;
+    let charIndex = 0;
+    let isTyping = true;
+    const shouldErase = element.getAttribute("data-erase") !== "false"; 
+    let hasStarted = false; // Track if animation has started
+
+    function type() {
+        if (charIndex < phrases[index].length && isTyping) {
+            element.innerHTML = phrases[index].substring(0, charIndex + 1) + "_";
+            charIndex++;
+            setTimeout(type, speed);
+        } else {
+            isTyping = false;
+            element.innerHTML = phrases[index] + "_"; // Keep underscore after typing
+
+            if (!shouldErase) {
+                // If data-erase="false", remove the underscore after full typing
+                setTimeout(() => {
+                    element.innerHTML = phrases[index]; 
+                }, 500);
+            } else {
+                // If erasing is enabled, remove the underscore and start erase effect
+                setTimeout(() => {
+                    element.innerHTML = phrases[index]; // Remove underscore before erasing
+                    setTimeout(erase, delay);
+                }, 500);
+            }
+        }
     }
+
+    function erase() {
+        if (charIndex > 0 && !isTyping) {
+            element.innerHTML = phrases[index].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, eraseSpeed);
+        } else {
+            isTyping = true;
+            index = (index + 1) % phrases.length;
+            setTimeout(type, 500);
+        }
+    }
+
+    function checkVisibility() {
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        if (rect.top >= 0 && rect.top <= windowHeight && !hasStarted) {
+            hasStarted = true; 
+            type();
+        }
+    }
+
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility();
 }
 
-function eraseEffect() {
-    if (charIndex > 0 && !isTyping) {
-        textElement.innerHTML = phrases[index].substring(0, charIndex - 1);
-        charIndex--;
-        setTimeout(eraseEffect, 50);
-    } else {
-        isTyping = true;
-        index = (index + 1) % phrases.length;
-        setTimeout(typeEffect, 500);
-    }
-}
-
-typeEffect();
+// Apply effect only when element enters viewport
+document.querySelectorAll(".typing-text").forEach((element) => {
+    const phrases = element.getAttribute("data-phrases").split("|"); 
+    typeEffect(element, phrases);
+});

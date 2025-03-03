@@ -167,6 +167,14 @@ html{
 .Block-Logos{
     height:80px;
 }
+.Block-Logos-Social{
+    width:70%;
+    height:10%;
+}
+.Block-Logos-Arch{
+    width:70%;
+    height:20%;
+}
 .Card-Paragraph{
     font-family:"Space Grotesk";
     font-size:18px;
@@ -187,4 +195,10 @@ html{
     .Card-Button{
         width:60%;
     }
+}
+.Modal-Tech-Heading{
+    font-family:"Space Grotesk";
+    color:#000;
+    font-weight:bold;
+    font-size:36px;
 }

@@ -1,3 +1,24 @@
+document.addEventListener("DOMContentLoaded", function () {
+    var carousel = document.querySelector("#carouselExampleIndicators"); // Change ID if needed
+    var touchStartX = 0;
+    var touchEndX = 0;
+
+    carousel.addEventListener("touchstart", function (e) {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    carousel.addEventListener("touchend", function (e) {
+      touchEndX = e.changedTouches[0].screenX;
+      if (touchStartX - touchEndX > 50) {
+        // Swipe left → Next slide
+        $(carousel).carousel("next");
+      } else if (touchEndX - touchStartX > 50) {
+        // Swipe right → Previous slide
+        $(carousel).carousel("prev");
+      }
+    });
+  });
+  
 $(window).scroll(function () {
     $('nav').toggleClass('scrolled', $(this).scrollTop() > 20);
 });
@@ -86,3 +107,25 @@ document.querySelectorAll(".typing-text").forEach((element) => {
     const phrases = element.getAttribute("data-phrases").split("|"); 
     typeEffect(element, phrases);
 });
+
+$(document).ready(function () {
+    // Close navbar on clicking a nav link
+    $(document).on('click', '.navbar-nav a', function () {
+        $('.navbar-collapse').collapse('hide');
+    });
+
+    // Close navbar when clicking outside
+    $(document).click(function (event) {
+        var clickover = $(event.target);
+        var navbarOpen = $(".navbar-collapse").hasClass("show");
+        if (navbarOpen === true && !clickover.closest('.navbar').length) {
+            $('.navbar-collapse').collapse('hide');
+        }
+    });
+
+    // Close navbar on scroll
+    $(window).scroll(function () {
+        $('.navbar-collapse').collapse('hide');
+    });
+});
+

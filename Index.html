@@ -40,8 +40,9 @@
             </button>
             <div class="collapse navbar-collapse pl-3" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-link active pt-3 pt-lg-2" href="#">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-link" href="#">Events</a>
+                    <a class="nav-link active pt-3 pt-lg-2" href="#sectionHome">Home <span
+                            class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#sectionEvents">Events</a>
                     <a class="nav-link" href="#">About Thrithi</a>
                     <a class="nav-link" href="#">Contact Us</a>
                     <a class="nav-link pb-3" href="#">Register</a>
@@ -60,11 +61,16 @@
                     <div class="col-12">
                         <p class="Timer-Style"></p>
                     </div>
+                    <div class="col-12 text-center">
+                        <button class="Card-Main-Button">
+                            Register
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="sectionAbout">
+    <div id="sectionEvents">
         <div class="Background-Container-1">
             <div class="container">
                 <div class="row">
@@ -152,44 +158,221 @@
             </div>
         </div>
     </div>
+
     <!--Tech Modal-->
-    <div class="modal fade" id="staticBackdropTech" data-backdrop="static" data-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+    <div class="modal fade" id="staticBackdropTech" data-backdrop="static" data-keyboard="true" tabindex="-1"
+        aria-labelledby="staticBackdropLabelTech" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title Modal-Tech-Heading ml-auto" id="staticBackdropLabel">ICFAI TECH SCHOOL
+                    <h1 class="modal-title Modal-Tech-Heading ml-auto" id="staticBackdropLabelTech">ICFAI TECH SCHOOL
                     </h1>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body text-left">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="Events-Card-Container">
-                                    <h1 class="Event-Heading">
-                                        CHESS WITH AI
-                                    </h1>
-                                    <hr />
-                                    <p class="Event-Description">
-                                        ♟ Test your strategy against AI in the ultimate chess battle! 🤖
-                                    </p>
-                                    <div>
-                                        <p class="Event-SideHeading">
-                                            POOL PRIZE: 7500/-
-                                        </p>
-                                        <p class="Event-SideHeading">
-                                            COMPETITION TYPE: SOLO
-                                        </p>
-                                        <p class="Event-Contact">
-                                            POINT OF CONTACT: NITHIN - 6305680684
-                                        </p>
-                                    </div>
-                                </div>
+                <div class="modal-body">
+                    <div id="carouselExampleIndicatorsTech" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="3"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="4"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="5"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="6"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="7"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="8"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="9"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="10"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="11"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="12"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="13"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="14"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="15"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="16"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="17"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="18"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="19"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="20"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="21"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="22"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="23"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="24"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="25"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="26"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="27"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="28"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="29"></li>
+                            <li data-target="#carouselExampleIndicatorsTech" data-slide-to="30"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block Image-Carousel mx-auto w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741111269/Open_Mic_zmqim6.png"
+                                    alt="1">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741118189/Snap_Verse_lanodl.png"
+                                    alt="2">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741118374/Mini_Games_adv4xl.png"
+                                    alt="3">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741118938/Control_Cup_b9pli1.png"
+                                    alt="4">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741118962/Code_Smells_uoaddx.png"
+                                    alt="5">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741118992/Chess_With_AI_tvlltu.png"
+                                    alt="6">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741119030/Mad_Gab_pidggg.png"
+                                    alt="7">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741119135/Escape_Room_dmenjs.png"
+                                    alt="8">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741119163/Spell_Bee_br37dz.png"
+                                    alt="9">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741120194/Litarary_Trivia_wisq5g.png"
+                                    alt="10">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741120231/BGMI_Tournment_vowbqq.png"
+                                    alt="11">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741120262/Standup_Comedy_fxxfdr.png"
+                                    alt="12">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741120288/Micro_Sports_Challenge_nuzx0v.png"
+                                    alt="13">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741120321/Canvas_Arts_ttcrkz.png"
+                                    alt="14">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741120348/Tech_Hunt_kjvveg.png"
+                                    alt="15">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741120402/Fun_Zone_vkkwkb.png"
+                                    alt="16">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741120431/Retro_Arena_ynbhca.png"
+                                    alt="17">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741120458/Tech_Chamber_ey5y8j.png"
+                                    alt="18">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741120513/Mortal_Kombat_ukl6yt.png"
+                                    alt="19">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741120534/Laser_Maze_f6pvuc.png"
+                                    alt="20">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741121035/COD_Tournament_bko8yi.png"
+                                    alt="21">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741154662/ICFAI_PREMIER_LEAGUE_agfzhx.png"
+                                    alt="22">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741155177/AI_Music_Challenge_opcwos.png"
+                                    alt="23">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741155269/TRIATHLON_f7dc1k.png"
+                                    alt="24">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741155308/Photo_Scavenger_efm3qv.png"
+                                    alt="25">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741155361/Campus_Bingo_hcougz.png"
+                                    alt="26">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741155483/Bookmark_Studio_h3c6rg.png"
+                                    alt="27">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741155541/RC_Car_Racing_skbwaw.png"
+                                    alt="28">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741155595/Corn_Hole_idv2rr.png"
+                                    alt="29">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741155663/Art_Expo_Competition_birh9y.png"
+                                    alt="30">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741157398/Words_of_Wonder_outrrf.png"
+                                    alt="31">
                             </div>
                         </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicatorsTech" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicatorsTech" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -200,71 +383,261 @@
         </div>
     </div>
 
-    <!--BBA Modal-->
-    <div class="text-center">
-        <div class="modal fade" id="staticBackdropBBA" data-backdrop="static" data-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title Modal-Tech-Heading ml-auto" id="staticBackdropLabel">ICFAI BUSINESS
-                            SCHOOL</h1>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
 
+    <!--BBA Modal-->
+    <div class="modal fade" id="staticBackdropBBA" data-backdrop="static" data-keyboard="true" tabindex="-1"
+        aria-labelledby="staticBackdropLabelBBA" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title Modal-Tech-Heading ml-auto" id="staticBackdropLabelBBA">ICFAI BUSINESS
+                        SCHOOL</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselExampleIndicatorsBBA" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicatorsBBA" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicatorsBBA" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicatorsBBA" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicatorsBBA" data-slide-to="3"></li>
+                            <li data-target="#carouselExampleIndicatorsBBA" data-slide-to="4"></li>
+                            <li data-target="#carouselExampleIndicatorsBBA" data-slide-to="5"></li>
+                            <li data-target="#carouselExampleIndicatorsBBA" data-slide-to="6"></li>
+                            <li data-target="#carouselExampleIndicatorsBBA" data-slide-to="7"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block Image-Carousel mx-auto w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741162061/Market_Kshetra_k8oxev.png"
+                                    alt="1">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741162138/Rise_to_the_Hammer_bygogi.png"
+                                    alt="2">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741162162/Gensis_qtm3au.png"
+                                    alt="3">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741162188/Resolve_360_pj7kmb.png"
+                                    alt="4">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741162212/Zero_Hour_xrufea.png"
+                                    alt="5">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741162242/KBC_mo8d5t.png"
+                                    alt="6">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block Image-Carousel mx-auto  w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741162266/Market_Masters_uwbtf2.png"
+                                    alt="7">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicatorsBBA" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicatorsBBA" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!--Law Modal-->
-    <div class="text-center">
-        <div class="modal fade" id="staticBackdropLaw" data-backdrop="static" data-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title Modal-Tech-Heading ml-auto" id="staticBackdropLabel">ICFAI LAW SCHOOL
-                        </h1>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+    <div class="modal fade" id="staticBackdropLaw" data-backdrop="static" data-keyboard="true" tabindex="-1"
+        aria-labelledby="staticBackdropLabelLaw" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title Modal-Tech-Heading ml-auto" id="staticBackdropLabelLaw">ICFAI LAW SCHOOL
+                    </h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselExampleIndicatorsLaw" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicatorsLaw" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicatorsLaw" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicatorsLaw" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicatorsLaw" data-slide-to="3"></li>
+                            <li data-target="#carouselExampleIndicatorsLaw" data-slide-to="4"></li>
+                            <li data-target="#carouselExampleIndicatorsLaw" data-slide-to="5"></li>
+                            <li data-target="#carouselExampleIndicatorsLaw" data-slide-to="6"></li>
+                            <li data-target="#carouselExampleIndicatorsLaw" data-slide-to="7"></li>
+                            <li data-target="#carouselExampleIndicatorsLaw" data-slide-to="8"></li>
+                            <li data-target="#carouselExampleIndicatorsLaw" data-slide-to="9"></li>
+                            <li data-target="#carouselExampleIndicatorsLaw" data-slide-to="10"></li>
+                            <li data-target="#carouselExampleIndicatorsLaw" data-slide-to="11"></li>
+                            <li data-target="#carouselExampleIndicatorsLaw" data-slide-to="12"></li>
+                            <li data-target="#carouselExampleIndicatorsLaw" data-slide-to="13"></li>
+                            <li data-target="#carouselExampleIndicatorsLaw" data-slide-to="14"></li>
+                            <li data-target="#carouselExampleIndicatorsLaw" data-slide-to="15"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741164173/Caricature_clxoy4.png"
+                                    alt="1">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741164607/Untitled-2_iisdt1.png"
+                                    alt="2">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741164660/Untitled-3_gkqda7.png"
+                                    alt="3">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741164696/Untitled-4_fjhtwz.png"
+                                    alt="3">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741164739/Untitled-5_hxuizc.png"
+                                    alt="4">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741164772/Untitled-6_d91v3f.png"
+                                    alt="5">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741164790/Untitled-7_dv3gbs.png"
+                                    alt="6">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741164807/Untitled-8_bny0rk.png"
+                                    alt="7">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741164824/Untitled-9_izxule.png"
+                                    alt="8">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741164878/Untitled-10_dd6nax.png"
+                                    alt="9">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741164892/Untitled-11_ujowwu.png"
+                                    alt="10">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741164910/Untitled-12_gqyzi5.png"
+                                    alt="11">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741164930/Untitled-13_xdmsk5.png"
+                                    alt="12">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741164948/Untitled-14_ejbkof.png"
+                                    alt="13">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741164983/Untitled-15_rkxvgn.png"
+                                    alt="14">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741165001/Untitled-16_nrrnht.png"
+                                    alt="15">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicatorsLaw" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicatorsLaw" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
-                    <div class="modal-body">
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!--Architecture Modal-->
-    <div class="text-center">
-        <div class="modal fade" id="staticBackdropArc" data-backdrop="static" data-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal fade" id="staticBackdropArc" data-backdrop="static" data-keyboard="true" tabindex="-1"
+            aria-labelledby="staticBackdropLabelArc" aria-hidden="true">
+            <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title Modal-Tech-Heading ml-auto" id="staticBackdropLabel">ICFAI SCHOOL OF
+                        <h1 class="modal-title Modal-Tech-Heading ml-auto" id="staticBackdropLabelArc">ICFAI SCHOOL OF
                             ARCHITECTURE</h1>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-
+                        <div id="carouselExampleIndicatorsArc" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                              <li data-target="#carouselExampleIndicatorsArc" data-slide-to="0" class="active"></li>
+                              <li data-target="#carouselExampleIndicatorsArc" data-slide-to="1"></li>
+                              <li data-target="#carouselExampleIndicatorsArc" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img class="d-block w-100" src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741165758/Tote_Bag_Art_zxib9t.png" alt="1">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741165756/Carnival_of_Charcters_klnopg.png" alt="2">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741165755/Mic_Drop_Madness_yfrw4x.png" alt="3">
+                              </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicatorsArc" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicatorsArc" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -273,23 +646,49 @@
                 </div>
             </div>
         </div>
-    </div>
 
     <!--Sciences Modal-->
-    <div class="text-center">
-        <div class="modal fade" id="staticBackdropSoc" data-backdrop="static" data-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal fade" id="staticBackdropSoc" data-backdrop="static" data-keyboard="true" tabindex="-1"
+            aria-labelledby="staticBackdropLabelSoc" aria-hidden="true">
+            <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title Modal-Tech-Heading ml-auto" id="staticBackdropLabel">ICFAI SCHOOL OF
+                        <h1 class="modal-title Modal-Tech-Heading ml-auto" id="staticBackdropLabelSoc">ICFAI SCHOOL OF
                             Social Sciences</h1>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-
+                        <div id="carouselExampleIndicatorsSoc" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                              <li data-target="#carouselExampleIndicatorsSoc" data-slide-to="0" class="active"></li>
+                              <li data-target="#carouselExampleIndicatorsSoc" data-slide-to="1"></li>
+                              <li data-target="#carouselExampleIndicatorsSoc" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img class="d-block w-100" src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741165909/CANVAS_CARNIVAL_hdlxnf.png" alt="1">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741165907/Econ-Psycho_kpq4ro.png" alt="2">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741165906/LENS_LEGACY_mddmkx.png" alt="3">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="https://res.cloudinary.com/doxjkpn5a/image/upload/v1741165904/FLIP_THE_fyjkh6.png" alt="4">
+                              </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicatorsSoc" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicatorsSoc" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -298,6 +697,5 @@
                 </div>
             </div>
         </div>
-    </div>
     <script src="Script.js"></script>
 </body>

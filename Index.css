@@ -1,6 +1,10 @@
 html {
     scroll-behavior: smooth;
 }
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
 
 .Background-Container {
     background-image: url("https://res.cloudinary.com/doxjkpn5a/image/upload/v1740915314/Home_2_rjk1hv.png");
@@ -56,6 +60,7 @@ html {
 @media (max-width:767px) {
     .Background-Container {
         background-image: url("https://res.cloudinary.com/doxjkpn5a/image/upload/v1740975611/Home-1_ukcwji.png");
+        background-size:cover;
     }
 
     .Main-Intro {
@@ -130,6 +135,12 @@ html {
 .Background-Container-1 {
     background-color: #F3F0E0;
 }
+.Background-Container-2{
+    background-image: url("https://res.cloudinary.com/doxjkpn5a/image/upload/v1741330781/BG-2_rq2vma.svg");
+    background-size: cover;
+    width:100%;
+    height:100%;
+}
 
 .Side-Heading {
     font-family: "Space Grotesk";
@@ -153,6 +164,24 @@ html {
     border-bottom-left-radius: 36px;
 }
 
+.Side-Heading-1 {
+    font-family: "Space Grotesk";
+    color: #F3F0E0;
+    font-weight: bold;
+    font-size: 56px;
+}
+
+.Side-Heading-Symbol-1 {
+    font-family: "Space Grotesk";
+    color: #EAD7C5;
+    font-weight: bold;
+    font-size: 56px;
+}
+
+.Side-Heading-Container{
+    margin-top:110px;
+}
+
 @media (max-width:575px) {
     .Side-Heading {
         font-size: 42px;
@@ -160,6 +189,16 @@ html {
 
     .Side-Heading-Symbol {
         font-size: 42px;
+    }
+}
+
+@media (max-width:575px) {
+    .Side-Heading-1 {
+        font-size: 36px;
+    }
+
+    .Side-Heading-Symbol-1 {
+        font-size: 36px;
     }
 }
 
@@ -185,12 +224,12 @@ html {
 
 .Block-Logos-Social {
     width: 70%;
-    height: 10%;
+    height: 14%;
 }
 
 .Block-Logos-Arch {
     width: 70%;
-    height: 20%;
+    height: 16%;
 }
 
 .Card-Paragraph {
@@ -261,9 +300,79 @@ html {
 }
 
 .carousel-indicators li {
-    background-color: rgba(0, 0, 0, 0.5); /* Inactive indicators (dark gray) */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Inactive indicators (dark gray) */
 }
 
 .carousel-indicators .active {
-    background-color: black; /* Active indicator (black) */
+    background-color: black;
+    /* Active indicator (black) */
+}
+
+.modal-content {
+    border-radius: 12px;
+}
+
+.registration-section {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+}
+
+.file-container {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.remove-file {
+    margin-left: 10px;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+
+#alertContainer {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050;
+    /* Ensure it's above the modal */
+    width: 90%;
+    max-width: 500px;
+}
+.About-Logo{
+    height:100%;
+    width:100%;
+}
+@media (min-width:767px) and (max-width:1023px){
+    .About-Logo{
+        height:60%;
+        width:140%;
+    }
+}
+.Vertical-Line {
+    width: 2px;
+    height: 100%;
+    background-color:#F3F0E0;
+    border-style:dashed;
+    border-width:2px;
+}
+.Horizontal-Line {
+    width: 100%;
+    background-color:#F3F0E0;
+    border-style:dashed;
+    border-width:2px;
+}
+.About-Text{
+    font-family:"Space Grotesk";
+    color:#F3F0E0;
+}
+.About-Heading{
+    font-family:"Space Grotesk";
+    color:#F3F0E0;
+    font-weight:bold;
+    font-size:36px;
 }

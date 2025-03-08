@@ -7,9 +7,9 @@ html, body {
 }
 
 .Background-Container {
-    background-image: url("https://res.cloudinary.com/doxjkpn5a/image/upload/v1740915314/Home_2_rjk1hv.png");
+    background-image: url("/Images/BackgroundImages/BackgroundImage-1.jpg");
     background-size: cover;
-    height: 110vh;
+    height: 120vh;
 }
 
 .Navbar-Color {
@@ -58,11 +58,6 @@ html, body {
 }
 
 @media (max-width:767px) {
-    .Background-Container {
-        background-image: url("https://res.cloudinary.com/doxjkpn5a/image/upload/v1740975611/Home-1_ukcwji.png");
-        background-size:cover;
-    }
-
     .Main-Intro {
         font-size: 30px !important;
     }
@@ -136,12 +131,17 @@ html, body {
     background-color: #F3F0E0;
 }
 .Background-Container-2{
-    background-image: url("https://res.cloudinary.com/doxjkpn5a/image/upload/v1741330781/BG-2_rq2vma.svg");
+    background-image: url("/Images/BackgroundImages/BackgroundImage-2.svg");
     background-size: cover;
     width:100%;
     height:100%;
 }
-
+.Background-Container-3{
+    background-image: url("/Images/BackgroundImages/BackGround-Image3.svg");
+    background-size: cover;
+    width:100%;
+    height:100%;
+}
 .Side-Heading {
     font-family: "Space Grotesk";
     color: #F3F0E0;
@@ -179,7 +179,10 @@ html, body {
 }
 
 .Side-Heading-Container{
-    margin-top:110px;
+    margin-top:160px;
+}
+.Contact-Margin{
+    margin-top:160px;
 }
 
 @media (max-width:575px) {
@@ -301,12 +304,11 @@ html, body {
 
 .carousel-indicators li {
     background-color: rgba(0, 0, 0, 0.5);
-    /* Inactive indicators (dark gray) */
 }
 
 .carousel-indicators .active {
     background-color: black;
-    /* Active indicator (black) */
+
 }
 
 .modal-content {
@@ -339,7 +341,6 @@ html, body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1050;
-    /* Ensure it's above the modal */
     width: 90%;
     max-width: 500px;
 }
@@ -356,13 +357,14 @@ html, body {
 .Vertical-Line {
     width: 2px;
     height: 100%;
-    background-color:#F3F0E0;
+    border-color:#F3F0E0;
     border-style:dashed;
     border-width:2px;
 }
+
 .Horizontal-Line {
     width: 100%;
-    background-color:#F3F0E0;
+    border-color:#F3F0E0;
     border-style:dashed;
     border-width:2px;
 }
@@ -375,4 +377,103 @@ html, body {
     color:#F3F0E0;
     font-weight:bold;
     font-size:36px;
+}
+
+.POC-Card {
+    border-width: 2px;
+    border-color: #641D36;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: #EAD7C5;
+}
+
+.POC-Heading {
+    font-family: "Space Grotesk";
+    color: #641D36;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    padding:15px;
+}
+.POC-Text{
+    padding:15px;
+}
+
+.Vertical-Line-1 {
+    width: 2px;
+    min-height: 232px;
+    border-left: 2px dashed #641D36;
+}
+
+.Custom-Flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.POC-Text{
+    font-family:"Space Grotesk";
+    color:#641D36;
+}
+.Horizontal-Line {
+    width: 100%;
+    border-top: 2px dashed #641D36;
+    min-width:240px;
+}
+
+@media (max-width: 767px) {
+    .Vertical-Line-1 {
+        display: none;
+    }
+    
+    .POC-Heading {
+        font-size: 28px;
+    }
+    
+    .POC-Card {
+        text-align: center;
+    }
+    .POC-Text{
+        font-size:12px;
+    }
+}
+.disabled-link {
+    pointer-events: none;
+    color: gray;
+    text-decoration: none;
+    opacity: 0.6;
+}
+.Footer-Section{
+    background-color: #641D36;
+    height: 100%;
+}
+.Footer-Heading{
+    font-family:"Space Grotesk";
+    color: #F3F0E0;
+    font-size: 26px;
+    font-weight: bold;
+}
+.Footer-Paragraph{
+    font-family:"Space Grotesk";
+    color:#F3F0E0;
+    font-size:10px;
+}
+.Footer-Icons{
+    color:#F3F0E0;
+}
+
+.Footer-HR{
+    background-color:#F3F0E0;
+    width:100%
+}
+.Nav-Logo-1 {
+    height: 34.5px;
+    border-radius: 12px;
+}
+
+.Nav-Logo-Title-1 {
+    font-family: "Space Grotesk";
+    color: #F3F0E0;
+    font-size: 20px;
+    font-weight: bold;
 }

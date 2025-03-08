@@ -2,8 +2,17 @@ html {
     scroll-behavior: smooth;
 }
 html, body {
-    overflow-x: hidden;
-    width: 100%;
+    overflow-x: hidden !important;
+    width: 100% !important;
+}
+
+body.modal-open {
+    padding-right: 0px !important;
+    overflow: hidden;
+}
+
+.navbar {
+    padding: 8px 16px !important; /* 8px top-bottom, 16px left-right */
 }
 
 .Background-Container {
@@ -16,8 +25,24 @@ html, body {
     background-color: transparent;
 }
 
+.Navbar-Color {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
 .Navbar-Color.scrolled {
-    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+}
+
+.navbar-toggler{
+    border-style:none;
+    cursor: pointer;
+    transition:transform 0.2s ease;
+}
+
+.navbar-toggler:active {
+    transform: scale(0.9);
 }
 
 .navbar-brand {
@@ -39,6 +64,10 @@ html, body {
     color: #F3F0E0 !important;
 }
 
+.navbar-nav .nav-link {
+font-family:"Space Grotesk";
+}
+
 .Logo {
     height: 120px;
 }
@@ -49,7 +78,22 @@ html, body {
     margin-top: 0px;
     color: #F3F0E0;
     font-family: "Space Grotesk";
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+    animation: pulseGlow 1.5s infinite alternate ease-in-out;
 }
+
+
+/* Glowing Pulse Effect */
+@keyframes pulseGlow {
+    0% {
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+    }
+    100% {
+        text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+    }
+}
+
 
 .Main-Intro {
     font-family: "Space Grotesk";
@@ -245,21 +289,47 @@ html, body {
 .Card-Button {
     background-color: #641D36;
     color: #EAD7C5;
-    border-width: 0;
+    border: none;
     border-radius: 22px;
     padding: 10px;
     width: 50%;
-    font-family: "Space Grotesk";
+    font-family: "Space Grotesk", sans-serif;
     font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect */
+.Card-Button:hover {
+    background-color: #7A243F; /* Slightly lighter shade */
+    transform: scale(1.05); /* Slightly enlarges */
+}
+
+/* Active (Click) Effect */
+.Card-Button:active {
+    transform: scale(0.98); /* Shrinks slightly when clicked */
 }
 
 .Card-Main-Button {
     background-color: #EAD7C5;
-    border-width: 0;
+    border: none;
     border-radius: 22px;
-    padding: 10px;
-    font-family: "Space Grotesk";
+    padding: 10px 20px;
+    font-family: "Space Grotesk", sans-serif;
     font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    outline:none !important;
+}
+
+.Card-Main-Button:hover {
+    background-color: #DFC4A9;
+    transform: scale(1.05);
+}
+
+.Card-Main-Button:active {
+    transform: scale(0.98);
 }
 
 @media (max-width: 320px) {
@@ -476,4 +546,49 @@ html, body {
     color: #F3F0E0;
     font-size: 20px;
     font-weight: bold;
+}
+.contact-link {
+    color: #641D36;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Hover Effect */
+.contact-link:hover {
+    color: #EAD7C5;
+    text-decoration: none;
+    background-color: #641D36;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+@media (pointer: coarse) {
+    .contact-link {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .contact-link:active {
+        background-color: #641D36;
+        color: #EAD7C5;
+        border-radius: 5px;
+    }
+}
+.insta-link {
+    color: #EAD7C5;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+@media (hover: hover) {
+    .insta-link:hover {
+        color: #ff4081;
+        transform: scale(1.2);
+    }
+}
+
+@media (pointer: coarse) {
+    .insta-link:active {
+        color: #ff4081;
+        transform: scale(1.2);
+    }
 }

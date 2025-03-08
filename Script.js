@@ -25,40 +25,78 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Adds or removes the 'scrolled' class on the navbar when the user scrolls past 20px.
 $(window).scroll(function () {
-    $('nav').toggleClass('scrolled', $(this).scrollTop() > 20);
+    if ($(this).scrollTop() > 20) {
+        $('.Navbar-Color').addClass('scrolled');
+    } else {
+        $('.Navbar-Color').removeClass('scrolled');
+    }
 });
 
-//Countdown
-var countDownDate = new Date("March 20, 2025 10:00:00").getTime();
+// Event Start & End Times
+var eventStartDate = new Date("March 20, 2025 10:00:00").getTime();
+var eventEndDate = new Date("March 22, 2025 00:00:00").getTime();
 var timerElement = document.querySelector(".Timer-Style");
 
+const phrasesMap = {
+    beforeStart: ["THRITHI 2K25", "Almost Here!"],
+    live: ["THRITHI 2K25", "Happening Now!"],
+    expired: ["THRITHI 2K25", "Until Next Time!"]
+};
+
+let currentPhase = ""; // Track current phase to prevent unnecessary updates
+
+// Function to Update Timer & Manage Type Effect
 function updateTimer() {
     let now = new Date().getTime();
-    let distance = countDownDate - now;
-  
-    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  
-    if (distance < 0) {
-        timerElement.innerHTML = "EXPIRED";
+    let distanceToStart = eventStartDate - now;
+    let distanceToEnd = eventEndDate - now;
+    let days, hours, minutes, seconds, newPhase;
+
+    if (distanceToStart > 0) {
+        // BEFORE EVENT STARTS
+        days = Math.floor(distanceToStart / (1000 * 60 * 60 * 24));
+        hours = Math.floor((distanceToStart % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        minutes = Math.floor((distanceToStart % (1000 * 60 * 60)) / (1000 * 60));
+        seconds = Math.floor((distanceToStart % (1000 * 60)) / 1000);
+        newPhase = "beforeStart";
+    } else if (distanceToEnd > 0) {
+        // EVENT IS LIVE
+        days = Math.floor(distanceToEnd / (1000 * 60 * 60 * 24));
+        hours = Math.floor((distanceToEnd % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        minutes = Math.floor((distanceToEnd % (1000 * 60 * 60)) / (1000 * 60));
+        seconds = Math.floor((distanceToEnd % (1000 * 60)) / 1000);
+        newPhase = "live";
     } else {
+        // EVENT ENDED
+        timerElement.innerHTML = ""; // Remove Timer
+        newPhase = "expired";
+    }
+
+    // Update Timer Display
+    if (distanceToEnd > 0) {
         timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    // Only update typing effect when phase changes
+    if (newPhase !== currentPhase) {
+        currentPhase = newPhase;
+        updateTypingEffect(phrasesMap[currentPhase]);
     }
 }
 
-// Ensure timer is updated every second
-setInterval(updateTimer, 1000);
-updateTimer();
+// Function to Manage Type Effect (Runs Only on Phase Change)
+function updateTypingEffect(phrases) {
+    document.querySelectorAll(".typing-text").forEach((element) => {
+        typeEffect(element, phrases);
+    });
+}
 
-//TypeEffect
+// TypeEffect function
 function typeEffect(element, phrases, speed = 100, eraseSpeed = 50, delay = 1500) {
     let index = 0;
     let charIndex = 0;
     let isTyping = true;
-    const shouldErase = element.getAttribute("data-erase") !== "false"; 
-    let hasStarted = false; // Track if animation has started
+    let hasStarted = false;
 
     function type() {
         if (charIndex < phrases[index].length && isTyping) {
@@ -67,17 +105,69 @@ function typeEffect(element, phrases, speed = 100, eraseSpeed = 50, delay = 1500
             setTimeout(type, speed);
         } else {
             isTyping = false;
-            element.innerHTML = phrases[index] + "_"; // Keep underscore after typing
+            element.innerHTML = phrases[index] + "_";
+
+            setTimeout(() => {
+                element.innerHTML = phrases[index];
+                setTimeout(erase, delay);
+            }, 500);
+        }
+    }
+
+    function erase() {
+        // Stop erasing when "Until Next Time!" is fully typed
+        if (currentPhase === "expired" && index === phrases.length - 1) {
+            return; // Exit without erasing
+        }
+    
+        if (charIndex > 0 && !isTyping) {
+            element.innerHTML = phrases[index].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, eraseSpeed);
+        } else {
+            isTyping = true;
+            index = (index + 1) % phrases.length;
+            setTimeout(type, 500);
+        }
+    }
+
+    function checkVisibility() {
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        if (rect.top >= 0 && rect.top <= windowHeight && !hasStarted) {
+            hasStarted = true;
+            type();
+        }
+    }
+
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility();
+}
+
+//Type Effect For Side Headings
+function typeEffectSide(element, phrases, speed = 100, eraseSpeed = 50, delay = 1500) {
+    let index = 0;
+    let charIndex = 0;
+    let isTyping = true;
+    const shouldErase = element.getAttribute("data-erase") !== "false"; 
+    let hasStarted = false;
+
+    function type() {
+        if (charIndex < phrases[index].length && isTyping) {
+            element.innerHTML = phrases[index].substring(0, charIndex + 1) + "_";
+            charIndex++;
+            setTimeout(type, speed);
+        } else {
+            isTyping = false;
+            element.innerHTML = phrases[index] + "_"; 
 
             if (!shouldErase) {
-                // If data-erase="false", remove the underscore after full typing
                 setTimeout(() => {
                     element.innerHTML = phrases[index]; 
                 }, 500);
             } else {
-                // If erasing is enabled, remove the underscore and start erase effect
                 setTimeout(() => {
-                    element.innerHTML = phrases[index]; // Remove underscore before erasing
+                    element.innerHTML = phrases[index]; 
                     setTimeout(erase, delay);
                 }, 500);
             }
@@ -109,11 +199,15 @@ function typeEffect(element, phrases, speed = 100, eraseSpeed = 50, delay = 1500
     checkVisibility();
 }
 
-// Apply effect only when element enters viewport
-document.querySelectorAll(".typing-text").forEach((element) => {
+// Apply TypeEffect to Side Headings
+document.querySelectorAll(".typing-side").forEach((element) => {
     const phrases = element.getAttribute("data-phrases").split("|"); 
-    typeEffect(element, phrases);
+    typeEffectSide(element, phrases);
 });
+
+// Start Timer & Typing Effect
+setInterval(updateTimer, 1000);
+updateTimer();
 
 $(document).ready(function () {
     // Close navbar on clicking a nav link
@@ -228,7 +322,7 @@ document.getElementById("registrationForm").addEventListener("submit", function 
 
 
 
-
+//File Upload Alert
 function handleFileUpload(inputId, containerId) {
     document.getElementById(inputId).addEventListener("change", function () {
         let file = this.files[0];

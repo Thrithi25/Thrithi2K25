@@ -389,7 +389,7 @@ font-family:"Space Grotesk";
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background: white;
+    background: #F3F0E0;
 }
 
 .file-container {
@@ -592,3 +592,31 @@ font-family:"Space Grotesk";
         transform: scale(1.2);
     }
 }
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(100, 29, 54, 0.9);
+    color: #EAD7C5;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex; /* Keep it in the layout but invisible */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Hide it from interactions */
+    outline:none;
+}
+
+#scrollTopBtn:hover {
+    background-color: rgba(78, 21, 41, 1.0);
+}
+#scrollTopBtn:active {
+    transform: scale(0.9);
+}
+

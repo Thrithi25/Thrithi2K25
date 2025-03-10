@@ -33,8 +33,8 @@ $(window).scroll(function () {
 });
 
 // Event Start & End Times
-var eventStartDate = new Date("March 20, 2025 10:00:00").getTime();
-var eventEndDate = new Date("March 22, 2025 00:00:00").getTime();
+var eventStartDate = new Date("March 20, 2025 10:30:00").getTime();
+var eventEndDate = new Date("March 22, 2025 08:00:00").getTime();
 var timerElement = document.querySelector(".Timer-Style");
 
 const phrasesMap = {
@@ -348,3 +348,29 @@ function removeFile(inputId, containerId) {
 // Apply to both file inputs
 handleFileUpload("collegeID", "collegeFileContainer");
 handleFileUpload("aadhaarID", "aadhaarFileContainer");
+
+document.addEventListener("DOMContentLoaded", function () {
+    var scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+            scrollTopBtn.style.opacity = "1"; // Fade in
+            scrollTopBtn.style.visibility = "visible";
+        } else {
+            scrollTopBtn.style.opacity = "0"; // Fade out
+            scrollTopBtn.style.visibility = "hidden";
+        }
+    });
+
+    // Scroll to Top Function
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    scrollTopBtn.addEventListener("click", scrollToTop);
+});
+
+
+
+
+

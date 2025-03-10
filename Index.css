@@ -16,7 +16,7 @@ body.modal-open {
 }
 
 .Background-Container {
-    background-image: url("Images/BackgroundImages/BackgroundImage-1.jpg");
+    background-image: url("Images/BackgroundImages/BackgroundImage-1.svg");
     background-size: cover;
     height: 120vh;
 }

@@ -389,7 +389,7 @@ font-family:"Space Grotesk";
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background: #F3F0E0;
+    background: #f3f2ed;
 }
 
 .file-container {
@@ -619,4 +619,3 @@ font-family:"Space Grotesk";
 #scrollTopBtn:active {
     transform: scale(0.9);
 }
-

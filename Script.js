@@ -362,14 +362,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Scroll to Top Function
-    function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+    // Scroll to Specific Section Function
+    function scrollToSection(sectionId) {
+        let targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: "smooth" });
+        }
     }
 
-    scrollTopBtn.addEventListener("click", scrollToTop);
+    // Change "sectionHome" to your target section ID
+    scrollTopBtn.addEventListener("click", function () {
+        scrollToSection("sectionHome");
+    });
 });
-
 
 
 

@@ -175,13 +175,13 @@ font-family:"Space Grotesk";
     background-color: #F3F0E0;
 }
 .Background-Container-2{
-    background-image: url("Images/BackgroundImages/BackgroundImage-2.svg");
+    background-image: url("Images/BackgroundImages/BackgroundImage-2.jpg");
     background-size: cover;
     width:100%;
     height:100%;
 }
 .Background-Container-3{
-    background-image: url("Images/BackgroundImages/BackGround-Image3.svg");
+    background-image: url("Images/BackgroundImages/BackGround-Image3.jpg");
     background-size: cover;
     width:100%;
     height:100%;
